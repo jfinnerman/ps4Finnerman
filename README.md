@@ -21,7 +21,9 @@
    INSERT INTO `unemath_Finnerman`.`Customers` (`customer_id`, `first_name`, `last_name`, `email`, `phone_number`, `zip_id`, `address`) VALUES ('69779684', 'Juan', 'Cote', 'juanjose97@aol.com', '8884588768', '04106', '123 Jose Dr');
    
 8. Find all customer orders.
-
+  
+  SELECT orders FROM unemath_Finnerman.Customers; ???
+  
 9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
 
 10. List 5 questions that you can answer from this data.
