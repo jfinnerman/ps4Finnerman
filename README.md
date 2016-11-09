@@ -58,7 +58,11 @@
    INSERT INTO `unemath_Finnerman`.`Orders` (`Order_id`, `Customer_id`, `OrderItem_id`, `date`, `time`) VALUES ('4206', '69779684', '1217', '2016-07-11', '1200');
    
    INSERT INTO 'unemath_Finnerman`.`Orders` (`Order_id`, `Customer_id`, `OrderItem_id`, `date`, `time`) VALUES ('5555', '910360420', '1111', '2016-07-11', '1200');
-   
+  
+  INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('7890', '3', '69779684', '1005');
+
+   INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('8888', '1', '910360420', '1750');
+
 8. Find all customer orders.
 
 9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
