@@ -67,6 +67,10 @@
 
 9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
 
+ SELECT customer_id from unemath_Finnerman.Orders inner join unemath_Finnerman.Order_Items on Orders.order_id=Order_Items.order_id where product_id=1750;
+
+SELECT customer_id from unemath_Finnerman.Orders inner join unemath_Finnerman.Order_Items on Orders.order_id=Order_Items.order_id where product_id=3452;
+
 10. List 5 questions that you can answer from this data.
  
  How many items were bought during a certain week?
