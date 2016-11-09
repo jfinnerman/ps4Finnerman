@@ -2,7 +2,41 @@
 ## Problem Set 4 
 
 1. Create three tables: Customers, Orders, and OrderItems.
- go to tables and right click customers copy to clipboard etc
+ 
+ CREATE TABLE `Customers` (
+  `customer_id` int(11) NOT NULL,
+  `first_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `last_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone_number` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `zip` char(5) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`customer_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  
+   CREATE TABLE `Order Items` (
+  `orderItems_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT '1',
+  `order_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`orderItems_id`),
+  KEY `order_id_idx` (`order_id`),
+  KEY `product_id_idx` (`product_id`),
+  CONSTRAINT `order_id` FOREIGN KEY (`order_id`) REFERENCES `Orders` (`order_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  
+  CREATE TABLE `Orders` (
+  `order_id` int(11) NOT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `orderItem_id` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  PRIMARY KEY (`order_id`),
+  KEY `customer_id_idx` (`customer_id`),
+  CONSTRAINT `customer_id` FOREIGN KEY (`customer_id`) REFERENCES `Customers` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 2. Why do we need an OrderItems table?
   We need an OrderItems table in order to link the products table with the orders table and organize the items that wered ordered by customers.
 3. Create linked tables in MS Access.
