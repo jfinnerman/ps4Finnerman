@@ -65,6 +65,9 @@
 
 8. Find all customer orders.
 
+SELECT Customers.customer_id, Orders.order_id from unemath_Finnerman.Customers inner join unemath_Finnerman.Orders on Orders.customer_id=Customers.customer_id;
+
+
 9. Select all customers that orders a certain product (This will depend on what data you entered into the table).  Find all customers that ordered product 3452.  
 
  SELECT customer_id from unemath_Finnerman.Orders inner join unemath_Finnerman.Order_Items on Orders.order_id=Order_Items.order_id where product_id=1750;
