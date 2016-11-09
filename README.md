@@ -68,4 +68,5 @@
  How many items were bought during a certain week?
  What is the contact information for a specific customer?
  What was a specific item that someone ordered and that customers address?
- 
+ How many customers have the same zip code?
+ How many customers ordered the same product?
