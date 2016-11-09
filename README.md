@@ -59,9 +59,9 @@
    
    INSERT INTO 'unemath_Finnerman`.`Orders` (`Order_id`, `Customer_id`, `OrderItem_id`, `date`, `time`) VALUES ('5555', '910360420', '1111', '2016-07-11', '1200');
   
-  INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('7890', '3', '69779684', '1005');
+  INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('7890', '3', '4206', '1005');
 
-   INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('8888', '1', '910360420', '1750');
+   INSERT INTO `unemath_Finnerman`.`Order Items` (`orderItems_id`, `quantity`, `order_id`, `product_id`) VALUES ('8888', '1', '5555', '1750');
 
 8. Find all customer orders.
 
