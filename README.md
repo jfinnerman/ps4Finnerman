@@ -38,7 +38,9 @@
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 2. Why do we need an OrderItems table?
+  
   We need an OrderItems table in order to link the products table with the orders table and organize the items that wered ordered by customers.
+  
 3. Create linked tables in MS Access.
 
 4. Create forms to enter customer data.
